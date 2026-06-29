@@ -4,10 +4,116 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>prompting-for-performance</title>
+    <title>Prompting for Performance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
   </head>
   <body>
-    <div id="app"></div>
+
+    <!--NAV-->
+    <header class="nav-shell">
+      <div class="nav-inner">
+        <span class="nav-logo">IDEA X JPMC</span>
+        <button class="nav-hamburger" aria-label="Open Menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav-links" role="navigation">
+          <a href="#research" class="nav-link" data-section="research">Research</a>
+          <a href="#workshop" class="nav-link" data-section="workshop">Workshop</a>
+          <a href="#story" class="nav-link" data-section="story">Story Map</a>
+          <a href="#demo" class="nav-link" data-section="demo">Demo</a>
+          <a href="#prompt-lab" class="nav-link" data-section="prompt-lab">Prompt Lab</a>
+        </nav>
+      </div>
+      <div class="nav-progress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+          <div class="nav-progress-bar"></div>
+      </div>
+    </header>
+
+    <!--HERO-->
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="hero-eyebrow">Rutgers IDEA Fellowship X JPMorganChase</p>
+        <h1 class="hero-title">Prompting for Performance</h1>
+        <p class="hero-sub">Behavioural research, a prompt engineering workshop, and an AI-powered tool</p>
+        <a href="#research" class="hero-cta">Explore the research</a>
+      </div>
+      <div class="hero-bg" aria-hidden="true"></div>
+    </section>
+
+    <!--SECTION A: RESEARCH-->
+    <section class="site-section" id="research">
+      <div class="section-inner">
+        <div class="section-label">Section A</div>
+        <h2 class="section-title">Behavioural Research Hub</h2>
+        <p class="section-descr">Survey data, interview insights, and thematic findings from our research into how JPMC teams use AI tools today.</p>
+        <div class="placeholder-block">
+          <span>Research charts, quote carousel, and flip-card grid</span>
+        </div>
+      </div>
+    </section>
+
+    <!--SECTION B: WORKSHOP-->
+    <section class="site-section" id="workshop">
+      <div class="section-inner">
+        <div class="section-label">Section B</div>
+        <h2 class="section-title">Prompt Engineering Workshop</h2>
+        <p class="section-descr">Six interactive sub-sections covering how AI works, RAG, the CRAFT formula, techniques, and agentic prompting.</p>
+        <div class="placeholder-block">
+          <span>Interactive workshop modules B1-B6</span>
+        </div>
+      </div>
+    </section>
+
+    <!--SECTION C: STORY MAP-->
+    <section class="site-section" id="story">
+      <div class="section-inner">
+        <div class="section-label">Section C</div>
+        <h2 class="section-title">Story Map</h2>
+        <p class="section-descr">A visual timeline of the full IDEA X JPMorganChase project arc, from research brief through workshop delivery.</p>
+        <div class="placeholder-block">
+          <span>Horizontal scrollable timeline</span>
+        </div>
+      </div>
+    </section>
+
+    <!--SECTION D: DEMO-->
+    <section class="site-section" id="demo">
+      <div class="section-inner">
+        <div class="section-label">Section D</div>
+        <h2 class="section-title">Demo</h2>
+        <p class="section-descr">SA walkthrough of the live workshop session with JPMC IDEA Fellows.</p>
+        <div class="video-placeholder" id="video-container">
+          <div class="video-placeholder-inner">
+            <div class="play-icon" aria-hidden="true">▶︎</div>
+            <p>Video player placeholder</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--SECTION E: PROMPT LAB-->
+    <section class="site-section" id="prompt-lab">
+      <div class="section-inner">
+        <div class="section-label">Section E</div>
+        <h2 class="section-title">Prompt Lab</h2>
+        <p class="section-descr">Paste any prompt and get an improved version structured around the CRAFT framework, with a breakdown of every change.</p>
+        <div class="placeholder-block">
+          <span>Groq-powered prompt improver</span>
+        </div>
+      </div>
+    </section>
+
+    <!--FOOTER-->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <span class="footer-logo">IDEA X JPMC</span>
+        <span class="footer-copy">&copy; 2026 IDEA X JPMorganChase. All rights reserved.</span>
+      </div>
+    </footer>
+
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

@@ -1,60 +1,143 @@
-import './style.css'
-import typescriptLogo from './assets/typescript.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import { setupCounter } from './counter.ts'
+// -- Content Types --------------
+interface SiteConfig {
+  title: string;
+  subtitle: string;
+  videoUrl: string;
+}
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-<section id="center">
-  <div class="hero">
-    <img src="${heroImg}" class="base" width="170" height="179">
-    <img src="${typescriptLogo}" class="framework" alt="TypeScript logo"/>
-    <img src="${viteLogo}" class="vite" alt="Vite logo" />
-  </div>
-  <div>
-    <h1>Get started</h1>
-    <p>Edit <code>src/main.ts</code> and save to test <code>HMR</code></p>
-  </div>
-  <button id="counter" type="button" class="counter"></button>
-</section>
+// -- Load Site Configuration --------------
 
-<div class="ticks"></div>
+async function loadSiteConfig(): Promise<void> {
+  try {
+    const response = await fetch('/content/site-config.json');
+    const config: SiteConfig = await response.json();
+    
+    //Update page title 
+    document.title = config.title;
 
-<section id="next-steps">
-  <div id="docs">
-    <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#documentation-icon"></use></svg>
-    <h2>Documentation</h2>
-    <p>Your questions, answered</p>
-    <ul>
-      <li>
-        <a href="https://vite.dev/" target="_blank">
-          <img class="logo" src="${viteLogo}" alt="" />
-          Explore Vite
-        </a>
-      </li>
-      <li>
-        <a href="https://www.typescriptlang.org" target="_blank">
-          <img class="button-icon" src="${typescriptLogo}" alt="">
-          Learn more
-        </a>
-      </li>
-    </ul>
-  </div>
-  <div id="social">
-    <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#social-icon"></use></svg>
-    <h2>Connect with us</h2>
-    <p>Join the Vite community</p>
-    <ul>
-      <li><a href="https://github.com/vitejs/vite" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#github-icon"></use></svg>GitHub</a></li>
-      <li><a href="https://chat.vite.dev/" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#discord-icon"></use></svg>Discord</a></li>
-      <li><a href="https://x.com/vite_js" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#x-icon"></use></svg>X.com</a></li>
-      <li><a href="https://bsky.app/profile/vite.dev" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#bluesky-icon"></use></svg>Bluesky</a></li>
-    </ul>
-  </div>
-</section>
+    //inject video if url is set
+    if (config.videoUrl) {
+      const container = document.getElementById('video-container');
+      if (container) {
+        container.innerHTML = `
+          <iframe
+              src="${config.videoUrl}"
+              title="Workshop Demo Video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              style="width: 100%; height: 100%; border-radius: 12px;">
+          </iframe>
+        `;
+      } 
+    }
+  } catch (e) {
+      console.warn('site-config.json not loaded:', e);  
+  }
+}
 
-<div class="ticks"></div>
-<section id="spacer"></section>
-`
+// -- Scroll Progress Bar --------------
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+function initProgressBar(): void {
+  const bar = document.querySelector<HTMLElement>('.nav-progress-bar');
+  const progressEl = document.querySelector<HTMLElement>('.nav-progress');
+  if (!bar || !progressEl) return;
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = `${pct}%`;
+    progressEl?.setAttribute('aria-valuenow', String(Math.round(pct))) 
+  }, { passive: true });
+}
+
+// -- Active Nav Link on Scroll --------------
+function initActiveNav(): void {  
+  const sections = document.querySelectorAll<HTMLElement>('section[id]');
+  const navLinks = document.querySelectorAll<HTMLAnchorElement>('.nav-link');
+  const NAV_H = 80; 
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.dataset.section === id)
+        })
+      }
+    })
+  }, { rootMargin: `-${NAV_H}px 0px -55% 0px` });
+
+  sections.forEach(s => observer.observe(s));
+}
+
+// -- Mobile Hamburger Menu --------------
+function initHamburger(): void {
+  const btn = document.querySelector<HTMLButtonElement>('.nav-hamburger');
+  const links = document.querySelector<HTMLElement>('.nav-links');
+
+  if (!btn || !links) return;
+
+  btn.addEventListener('click', () => {
+    const isOpen = links.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(isOpen));
+  })
+
+  //close link on click
+  links.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => {
+      links.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    })
+  })
+
+  //close on outside click
+  document.addEventListener('click', (e) => {
+    if (!btn.contains(e.target as Node) && !links.contains(e.target as Node)) {
+      links.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+  })
+}
+
+// -- Scroll Reveal Animation --------------
+function initReveal(): void {
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+  
+  const style = document.createElement('style');
+  style.textContent = `
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.55s ease-out, transform 0.55s ease-out;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+  `
+
+  document.head.appendChild(style)
+
+  const targets = document.querySelectorAll('.section-label, .section-title, .section-desc, .placeholder-block, .video-placeholder')
+  targets.forEach((el) => el.classList.add('reveal'))
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    })
+  }, { threshold: 0.12 });
+
+  targets.forEach((el) => observer.observe(el));
+}
+
+// -- Boot --------------
+loadSiteConfig();
+initProgressBar();
+initActiveNav();
+initHamburger();
+initReveal();
