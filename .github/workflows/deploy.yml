@@ -1,22 +1,29 @@
-name: Deploy to GitHub Pages
+name: Deploy
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
 
 permissions:
   contents: write
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
+
       - run: npm install
-      - name: Deploy
-        run: npm run deploy
+
+      - run: npm run build
+
+      - name: Deploy to GitHub Pages
+        run: npx gh-pages -d dist -r "https://x-access-token:${GITHUB_TOKEN}@github.com/pallavibiswas/prompting_for_performance.git"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
