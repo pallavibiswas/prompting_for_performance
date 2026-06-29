@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "deploy": "vite build && gh-pages -d dist"
+    "deploy": "vite build && gh-pages -d dist -r https://x-access-token:${GITHUB_TOKEN}@github.com/pallavibiswas/prompting_for_performance.git --user \"github-actions-bot <github-actions-bot@users.noreply.github.com>\""
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
