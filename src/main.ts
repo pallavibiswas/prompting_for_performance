@@ -1,3 +1,5 @@
+import './style.css' 
+
 // -- Content Types --------------
 interface SiteConfig {
   title: string;
@@ -9,7 +11,7 @@ interface SiteConfig {
 
 async function loadSiteConfig(): Promise<void> {
   try {
-    const response = await fetch('/content/site-config.json');
+    const response = await fetch('./content/site-config.json');
     const config: SiteConfig = await response.json();
     
     //Update page title 
