@@ -14,7 +14,7 @@ Lat: 40.502
 Lon: -74.445
 Milestone: Program Launch
 Date: May 2026
-Description: The Rutgers IDEA program seeds its research initiative on AI adoption in enterprise environments. 127 participants recruited across academic and industry roles.
+Description: The Rutgers IDEA program seeds its research initiative on AI adoption in JPMorganChase. 127 participants recruited across academic and industry roles. 
 Images: src/assets/new-brunswick-1.jpg, src/assets/new-brunswick-2.jpg
 
 ---
@@ -22,9 +22,9 @@ Images: src/assets/new-brunswick-1.jpg, src/assets/new-brunswick-2.jpg
 Name: JPMorgan Chase Campus, Jersey City
 Lat: 40.7251
 Lon: -74.0321
-Milestone: Industry Partnership
+Milestone: Industry Partnership & Fieldwork
 Date: June–July 2026
-Description: JPMorganChase joins as lead industry partner. Field access granted to three operational divisions. Survey instrument co-designed with the internal AI governance team.
+Description: JPMorganChase joins as industry partner. Conversations with JPMC employees across departments in AI adoption and further discussions on final project deliverables.
 Images: src/assets/jersey-city-1.jpg
 
 ---
@@ -32,9 +32,9 @@ Images: src/assets/jersey-city-1.jpg
 Name: 270 Park Avenue, New York City
 Lat: 40.7560
 Lon: -73.9760
-Milestone: Fieldwork & Interviews
+Milestone: Networking & Growth
 Date: July 2026
-Description: 48 qualitative interviews conducted with analysts, researchers, and technologists. Key themes emerge around trust calibration and prompt quality gaps.
+Description: Continued conversations and learning about AI adoption. Learning about the JPMC culture and networking with professionals for professional development. 
 Images: src/assets/nyc-1.jpg
 
 ---
@@ -42,7 +42,7 @@ Images: src/assets/nyc-1.jpg
 Name: JPMorgan Chase EMEA Headquarters, London
 Lat: 51.50297
 Lon: -0.01900
-Milestone: International Expansion
+Milestone: International Expansion & Final Presentation
 Date: July 2026
-Description: Research extended to JPMorganChase London operations. Cross-cultural analysis reveals divergent adoption patterns between US and UK enterprise teams.
+Description: Research extended to JPMorganChase London operations. Cross-cultural analysis reveals divergent adoption patterns between US and UK enterprise teams. Final presentation and feedback.
 Images: src/assets/london-1.jpg, src/assets/london-2.jpg, src/assets/london-3.jpg
