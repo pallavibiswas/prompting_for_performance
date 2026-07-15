@@ -13,9 +13,9 @@ heading_line1: Understanding
 heading_line2: AI Adoption.
 heading_line3: Designing Better Adoption.
 
-body_left: As JPMorgan expands AI tools across the organization, employees are being introduced to new capabilities at an unprecedented pace. Our research found that successful adoption depends not only on access to AI, but also on how clearly employees understand its purpose, limitations, and practical value within their daily work.
+body_left: JPMorganChase has invested heavily in AI tools and training, and employees are actively engaging with them. Our research builds on that momentum by asking two questions: what shapes how employees feel about AI, and how can they get more out of the tools already in their hands? We found that unlocking AI's full value depends on what comes after access, with a clear understanding of its purpose and its practical place in daily work.
 
-body_right: Through a human-centered research partnership between Rutgers IDEA and JPMorganChase, we studied employee experiences with AI to uncover the barriers to effective adoption. These findings became the foundation for designing an AI workshop that helps employees build confidence, develop practical prompting skills, and use AI more intentionally.
+body_right: Through a human-centered research partnership between Rutgers IDEA and JPMorganChase, we combined surveys, interviews, and literature review to study employee experiences with AI firsthand. Those insights became the foundation for our AI workshop, built to close the gap between having AI and using it well to help employees grow confidence and work with AI more intentionally.
 
 stat1_value: 51
 stat1_label: Participants surveyed globally across client onboarding teams at JPMC
