@@ -21,7 +21,6 @@ jobs:
           cache: npm
 
       - run: npm ci
-
       - run: npm run build
 
       - name: Configure Git
@@ -30,6 +29,6 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: Deploy to GitHub Pages
-        run: npx gh-pages -d dist -r "https://x-access-token:${GITHUB_TOKEN}@github.com/pallavibiswas/prompting_for_performance.git"
+        run: npx gh-pages@6.3.0 -d dist -b gh-pages -f
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
