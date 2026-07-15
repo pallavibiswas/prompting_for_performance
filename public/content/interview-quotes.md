@@ -1,29 +1,38 @@
 <!--
 HOW TO EDIT THIS FILE
 Each block separated by a line containing only --- is one quote.
+Add as many blocks as you want — they render as a responsive grid.
 Line 1: the quote text (no quotation marks needed, added automatically)
 Line 2: starts with "— " then Name, Role/Location separated by a comma
 -->
 
-I use AI daily but I still feel like I'm missing something. My outputs are inconsistent and I can't always tell why.
-— Graduate Researcher, Rutgers University, New Jersey
+I use AI daily, but I feel like the time investment doesn’t pay off when I have to constantly prompt it to get my desired outcome.
+— Vice President, JPMorganChase, Jersey City
 
 ---
 
-The moment I learned to assign a role and add context to my prompts, the quality of responses improved dramatically. It's like the difference between asking a stranger and briefing a colleague.
-— Associate Analyst, JPMorganChase, Jersey City
+Learning to utilize agentic AI and effectively prompt it cuts down multi-day manual tasks into hours long automated ones.
+— Analyst, JPMorganChase, Jersey City
 
 ---
 
-There is a real tension between trusting the output and verifying it. I find myself second-guessing things even when they look right.
-— Senior Lecturer, Rutgers Business School
+AI has been something that has enhanced my role at the company. It allows me to deliver to communities and to my leadership team in a more efficient and effective way. 
+— Vice President, JPMorganChase, New York City
 
 ---
 
-AI made me faster. But faster at what? I had to step back and ask whether I was solving the right problems more efficiently, or just cutting corners faster.
-— Technology Operations Lead, JPMorganChase, London
+AI becomes difficult to use when the output requires multiple refinements, feels generic, or necessitates heavy double-checking. 
+— Associate, JPMorganChase, Jersey City
 
 ---
 
-The gap between people who know how to prompt and those who don't is becoming the new skills divide in enterprise environments.
-— Research Director, Rutgers IDEA Program
+Visualizing data structures and formatting slides to get a usable output is challenging, and near-impossible without an effective prompt
+— Analyst, JPMorganChase, New York City
+
+---
+
+AI has drastically improved major administrative pain points, especially in multi-source synthesis, saving me immense time and mental friction.
+— Vice President, JPMorganChase, Jersey City
+
+
+
