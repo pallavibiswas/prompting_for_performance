@@ -1,0 +1,222 @@
+.problem {
+    position: relative;
+    padding: 50px 0;
+    overflow: hidden;
+    background: #050f1c;
+}
+
+.problem__container {
+    width: min(100% - 96px, 940px);
+    margin: 0 auto;
+}
+
+.problem__eyebrow {
+    margin: 0 0 16px;
+    color: #1a73e8;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.problem__heading {
+    margin: 0 0 42px;
+    color: #f8fafc;
+    font-family: "Inter", sans-serif;
+    font-size: clamp(25px, 2.6vw, 36px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+.problem__loading-text {
+    margin: 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+}
+
+.problem__heading span {
+    display: block;
+}
+
+.problem__heading-accent {
+    color: #1a73e8;
+}
+
+..problem__body {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 48px;
+}
+
+.problem__body p {
+    margin: 0;
+    color: #94a3b8;
+    font-family: "Inter", sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.problem__stats {
+    margin-top: 52px;
+    padding-top: 36px;
+    border-top: 1px solid rgba(255, 255, 255, 0.055);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 40px;
+}
+
+.problem__stat-value {
+    margin-bottom: 14px;
+    color: #1a73e8;
+    font-family: "Inter", sans-serif;
+    font-size: clamp(38px, 4vw, 54px);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.035em;
+}
+.problem__stat {
+    min-width: 0;
+}
+
+.problem__stat-label {
+    color: #94a3b8;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .problem {
+        padding: 30px 0;
+    }
+
+    .problem__container {
+        width: min(100% - 64px, 940px);
+    }
+
+    .problem__eyebrow {
+        margin-bottom: 14px;
+        font-size: 15px;
+    }
+
+    .problem__heading {
+        margin-bottom: 36px;
+        font-size: clamp(28px, 4.8vw, 38px);
+    }
+
+    .problem__body {
+        gap: 34px;
+    }
+
+    .problem__body p {
+        font-size: 16px;
+    }
+
+    .problem__stats {
+        margin-top: 44px;
+        padding-top: 30px;
+        gap: 28px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    .problem {
+        padding: 27px 0;
+    }
+
+    .problem__container {
+        width: min(100% - 40px, 940px);
+    }
+
+    .problem__eyebrow {
+        margin-bottom: 14px;
+        font-size: 13px;
+        letter-spacing: 0.14em;
+    }
+
+    .problem__heading {
+        margin-bottom: 30px;
+        font-size: clamp(26px, 7vw, 34px);
+        line-height: 1.12;
+        letter-spacing: -0.025em;
+    }
+
+    .problem__body {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .problem__body p {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .problem__stats {
+        margin-top: 15px;
+        padding-top: 20px;
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .problem__stat {
+        display: grid;
+        grid-template-columns: minmax(82px, 0.3fr) 1fr;
+        gap: 10px;
+        align-items: start;
+    }
+
+    .problem__stat-value {
+        margin-bottom: 0;
+        font-size: clamp(25px, 7vw, 30px);
+    }
+
+    .problem__stat-label {
+        padding-top: 3px;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 420px) {
+    .problem {
+        padding: 24px 0;
+    }
+
+    .problem__container {
+        width: min(100% - 32px, 940px);
+    }
+
+    .problem__heading {
+        font-size: clamp(25px, 7.5vw, 31px);
+    }
+
+    .problem__body p {
+        font-size: 15px;
+    }
+
+    .problem__stat {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .problem__stat-value {
+        font-size: 25px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .problem__eyebrow,
+    .problem__heading,
+    .problem__body,
+    .problem__stats {
+        transition: none !important;
+        transform: none !important;
+    }
+}

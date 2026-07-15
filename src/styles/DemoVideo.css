@@ -1,0 +1,152 @@
+.demo-video {
+    position: relative;
+    padding: 35px 0 30px;
+    overflow: hidden;
+    background: #0a2540;
+    text-align: center;
+}
+
+.demo-video__container {
+    width: min(100% - 96px, 920px);
+    margin: 0 auto;
+}
+
+.demo-video__eyebrow {
+    margin: 0 0 16px;
+    color: #1a73e8;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.demo-video__heading {
+    margin: 0 0 44px;
+    color: #f8fafc;
+    font-family: "Inter", sans-serif;
+    font-size: clamp(25px, 2.6vw, 36px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+.demo-video__frame {
+    position: relative;
+    max-width: 820px;
+    margin: 0 auto 56px;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #050f1c;
+    box-shadow:
+        0 0 0 1px rgba(26, 115, 232, 0.28),
+        0 0 80px rgba(26, 115, 232, 0.14),
+        0 0 160px rgba(26, 115, 232, 0.05);
+}
+
+.demo-video__frame-glow {
+    position: absolute;
+    inset: -1px;
+    z-index: 1;
+    border-radius: 15px;
+    background:
+        linear-gradient(
+        135deg,
+        rgba(26, 115, 232, 0.35) 0%,
+        transparent 50%,
+        rgba(0, 94, 184, 0.35) 100%
+        );
+    pointer-events: none;
+}
+
+.demo-video__aspect-ratio {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #050f1c;
+}
+
+.demo-video__iframe {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.demo-video__accordion {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Tablet */
+@media (max-width: 800px) {
+    .demo-video {
+        padding: 24px 0 32px;
+    }
+
+    .demo-video__container {
+        width: min(100% - 64px, 920px);
+    }
+
+    .demo-video__heading {
+        margin-bottom: 38px;
+    }
+
+    .demo-video__frame {
+        margin-bottom: 40px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .demo-video {
+        padding: 20px 0 25px;
+    }
+
+    .demo-video__container {
+        width: min(100% - 40px, 920px);
+    }
+
+    .demo-video__eyebrow {
+        margin-bottom: 14px;
+        font-size: 12px;
+        letter-spacing: 0.14em;
+    }
+
+    .demo-video__heading {
+        margin-bottom: 30px;
+        font-size: clamp(26px, 7vw, 34px);
+        line-height: 1.12;
+    }
+
+    .demo-video__frame {
+        margin-bottom: 30px;
+        border-radius: 10px;
+        box-shadow:
+            0 0 0 1px rgba(26, 115, 232, 0.24),
+            0 0 42px rgba(26, 115, 232, 0.12);
+    }
+
+    .demo-video__frame-glow {
+        border-radius: 11px;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 390px) {
+    .demo-video {
+        padding: 48px 0 58px;
+    }
+
+    .demo-video__container {
+        width: min(100% - 32px, 920px);
+    }
+
+    .demo-video__heading {
+        font-size: 26px;
+    }
+}

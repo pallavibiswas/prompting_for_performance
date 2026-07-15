@@ -1,0 +1,362 @@
+.craft-intro {
+    position: relative;
+    padding: 50px 0 50px;
+    overflow: hidden;
+    background: #0a2540;
+}
+
+.craft-intro__container {
+    width: min(100% - 96px, 1180px);
+    margin: 0 auto;
+}
+
+.craft-intro__eyebrow {
+    margin: 0 0 16px;
+    color: #1a73e8;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.craft-intro__heading {
+    margin: 0 0 12px;
+    color: #f8fafc;
+    font-family: "Inter", sans-serif;
+    font-size: clamp(25px, 2.6vw, 36px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+.craft-intro__intro {
+    max-width: 760px;
+    margin: 0 0 56px;
+    color: #94a3b8;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.craft-intro__cards,
+.craft-intro__powerups {
+    display: grid;
+    grid-template-columns:
+        repeat(5, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.craft-intro__cards {
+    margin-bottom: 80px;
+}
+
+.craft-intro__card {
+    min-width: 0;
+    padding: 28px 22px;
+    border: 1px solid;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.craft-intro__letter {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    flex: 0 0 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.craft-intro__card-label {
+    margin-bottom: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    line-height: 1.45;
+    text-transform: uppercase;
+}
+
+.craft-intro__card-line {
+    width: 28px;
+    height: 2px;
+    margin-bottom: 12px;
+    border-radius: 2px;
+}
+
+.craft-intro__card-desc {
+    margin: 0;
+    color: #94a3b8;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.craft-intro__divider {
+    margin-bottom: 56px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.craft-intro__divider-line {
+    height: 1px;
+    flex: 1;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.craft-intro__divider-label {
+    color: #1a73e8;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+.craft-intro__powerups {
+    margin-bottom: 48px;
+}
+
+.craft-intro__powerup {
+    min-width: 0;
+    padding: 30px 24px;
+    border:
+        1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background: #070d18;
+}
+
+.craft-intro__powerup-letter {
+    width: 40px;
+    height: 32px;
+    border-radius: 50%;
+    flex: 0 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.craft-intro__powerup-name {
+    margin-bottom: 10px;
+    color: #f8fafc;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.craft-intro__snippet {
+    padding: 14px 16px;
+    border: 1px solid;
+    border-radius: 6px;
+    color: #94a3b8;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.craft-intro__hallucination {
+    margin-bottom: 0;
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.craft-intro__strategies {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.craft-intro__section-label {
+    margin-bottom: 4px;
+    color: #94a3b8;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 15px;
+    letter-spacing: 0.18em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.craft-intro__section-copy {
+    margin: 0 0 8px;
+    color: #64748b;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.craft-intro__strategy-card {
+    padding: 18px 20px;
+    border:
+        1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.craft-intro__strategy-title {
+    margin-bottom: 6px;
+    color: #f8fafc;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.craft-intro__strategy-desc {
+    color: #94a3b8;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.craft-intro__prompt-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.craft-intro__prompt-label {
+    margin-bottom: 14px;
+    color: #94a3b8;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.craft-intro__prompt {
+    margin: 0;
+    padding: 28px 32px;
+    border:
+        1px solid rgba(26, 115, 232, 0.2);
+    border-radius: 12px;
+    background: rgba(26, 115, 232, 0.07);
+    color: #e8edf3;
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.8;
+}
+
+.craft-intro__prompt strong {
+    color: #f8fafc;
+    font-style: normal;
+}
+
+/* Large tablet */
+@media (max-width: 1050px) {
+    .craft-intro__cards,
+    .craft-intro__powerups {
+        grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* Tablet */
+@media (max-width: 800px) {
+    .craft-intro {
+        padding: 30px 0 30px;
+    }
+
+    .craft-intro__container {
+        width: min(100% - 64px, 1180px);
+    }
+
+    .craft-intro__cards,
+    .craft-intro__powerups {
+        grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .craft-intro__hallucination {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .craft-intro__prompt-wrap {
+        justify-content: flex-start;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .craft-intro {
+        padding: 25px 0 16px;
+    }
+    .craft-intro__eyebrow {
+        margin-bottom: 14px;
+        font-size: 12px;
+        letter-spacing: 0.14em;
+    }
+
+    .craft-intro__heading {
+        font-size: clamp(26px, 7vw, 34px);
+        line-height: 1.12;
+    }
+
+    .craft-intro__intro {
+        max-width: 100%;
+        margin-bottom: 40px;
+        font-size: 14px;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 390px) {
+    .craft-intro {
+        padding: 68px 0;
+    }
+
+    .craft-intro__container {
+        width: min(100% - 32px, 1180px);
+    }
+
+    .craft-intro__card,
+    .craft-intro__powerup {
+        grid-template-columns: 1fr;
+    }
+
+    .craft-intro__prompt {
+        padding: 20px 18px;
+        font-size: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .craft-intro__eyebrow,
+    .craft-intro__heading,
+    .craft-intro__intro,
+    .craft-intro__cards,
+    .craft-intro__divider,
+    .craft-intro__powerups,
+    .craft-intro__hallucination {
+        transition: none !important;
+        transform: none !important;
+    }
+}

@@ -1,0 +1,549 @@
+.solutions {
+    position: relative;
+    overflow: hidden;
+    background: #0a2540;
+}
+
+.solutions--loading {
+    padding: 50px 0;
+}
+
+.solutions__loading-container {
+    width: min(100% - 64px, 1180px);
+    margin: 0 auto;
+}
+
+.solutions__loading-text {
+    margin: 0;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+}
+
+/* Header */
+
+.solutions__header {
+    padding: 35px 48px 42px;
+    text-align: center;
+}
+
+.solutions__eyebrow {
+    margin: 0 0 14px;
+    color: #1a73e8;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.solutions__heading {
+    max-width: 900px;
+    margin: 0 auto;
+    color: #f8fafc;
+    font-family: "Inter", sans-serif;
+    font-size: clamp(25px, 2.6vw, 36px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+.solutions__intro {
+    max-width: 620px;
+    margin: 14px auto 0;
+    color: #94a3b8;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Main split */
+
+.solutions__split {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        2px
+        minmax(0, 1fr);
+    min-height: 0;
+}
+
+.solutions__panel {
+    min-width: 0;
+}
+
+.solutions__panel--behavioral {
+    padding: 48px 64px 56px max(40px, 7vw);
+    background:
+        linear-gradient(
+            135deg,
+            #050f1c 0%,
+            #091a2e 100%
+        );
+}
+
+.solutions__panel--technical {
+    padding: 48px max(40px, 7vw) 56px 64px;
+    background:
+        linear-gradient(
+            135deg,
+            #091a2e 0%,
+            #0f2d55 100%
+        );
+}
+
+.solutions__panel-label {
+    color: #94a3b8;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.solutions__panel-heading {
+    margin: 12px 0 34px;
+    color: #f8fafc;
+    font-family: "Inter", sans-serif;
+    font-size: clamp(26px, 2.5vw, 34px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+}
+
+.solutions__panel-heading span {
+    display: block;
+}
+
+/* Behavioural */
+
+.solutions__behavioral-item {
+    margin-bottom: 28px;
+    padding-left: 20px;
+    border-left: 2px solid rgba(26, 115, 232, 0.28);
+}
+
+.solutions__behavioral-item:last-child {
+    margin-bottom: 0;
+}
+
+.solutions__behavioral-title {
+    margin-bottom: 7px;
+    color: #1a73e8;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.solutions__behavioral-desc {
+    color: #94a3b8;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Divider */
+
+.solutions__divider {
+    position: relative;
+    z-index: 2;
+    width: 2px;
+    background:
+        linear-gradient(
+            180deg,
+            transparent 0%,
+            #1a73e8 25%,
+            #005eb8 75%,
+            transparent 100%
+        );
+}
+
+.solutions__divider-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(26, 115, 232, 0.7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0a2540;
+    color: #1a73e8;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    box-shadow: 0 0 24px rgba(26, 115, 232, 0.4);
+    transform: translate(-50%, -50%);
+}
+
+/* CRAFT */
+
+.solutions__craft-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 38px;
+}
+
+.solutions__craft-step {
+    flex: 1;
+    position: relative;
+    text-align: center;
+}
+
+.solutions__craft-letter {
+    width: 46px;
+    height: 46px;
+    margin: 0 auto 9px;
+    border: 1px solid;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.solutions__craft-label {
+    color: #f8fafc;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.solutions__craft-arrow {
+    position: absolute;
+    top: 17px;
+    right: -12px;
+    color: #1a73e8;
+}
+
+.solutions__craft-step:last-child .solutions__craft-arrow {
+    display: none;
+}
+
+/* Choosing the Right Tool */
+
+.solutions__agents {
+    margin-top: 38px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.solutions__agents-header {
+    margin-bottom: 20px;
+    color: #f8fafc;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.solutions__agents-card {
+    display: grid;
+    grid-template-columns: 1fr 1px 1fr;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.solutions__agent-divider {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.solutions__agent-column {
+    padding: 24px 22px;
+    text-align: center;
+}
+
+.solutions__agent-title {
+    margin-bottom: 16px;
+    color: #f8fafc;
+    font-family: "Inter", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.solutions__workflow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+    margin: 16px 0 14px;
+}
+
+.solutions__workflow-box {
+    padding: 8px 12px;
+    border: 1px solid rgba(26, 115, 232, 0.35);
+    border-radius: 8px;
+    background: rgba(26, 115, 232, 0.08);
+    color: #f8fafc;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.solutions__workflow-arrow {
+    color: #1a73e8;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.solutions__workflow-loop {
+    margin-bottom: 18px;
+    color: #94a3b8;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    text-align: center;
+}
+
+.solutions__agent-caption {
+    margin-bottom: 18px;
+    color: #94a3b8;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.solutions__agent-subheading {
+    margin-bottom: 9px;
+    color: #f8fafc;
+    font-family: "Inter", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.solutions__agent-list {
+    margin: 0;
+    padding-left: 18px;
+    color: #94a3b8;
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+    line-height: 1.65;
+    text-align: left;
+}
+
+.solutions__agent-list li + li {
+    margin-top: 7px;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+    .solutions__header {
+        padding: 30px 40px 36px;
+    }
+
+    .solutions__eyebrow {
+        font-size: 14px;
+    }
+
+    .solutions__panel--behavioral,
+    .solutions__panel--technical {
+        padding: 42px 38px 48px;
+    }
+
+    .solutions__panel-heading {
+        margin-bottom: 30px;
+        font-size: 28px;
+    }
+
+    .solutions__craft-row {
+        gap: 10px;
+        margin-bottom: 32px;
+    }
+
+    .solutions__craft-letter {
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+    }
+
+    .solutions__craft-label {
+        font-size: 11px;
+    }
+
+    .solutions__agent-column {
+        padding: 20px 16px;
+    }
+
+    .solutions__workflow {
+        gap: 6px;
+    }
+
+    .solutions__workflow-box {
+        padding: 7px 9px;
+        font-size: 10px;
+    }
+
+    .solutions__agent-list {
+        font-size: 11px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 760px) {
+    .solutions__header {
+        padding: 25px 20px 30px;
+    }
+
+    .solutions__eyebrow {
+        margin-bottom: 14px;
+        font-size: 13px;
+        letter-spacing: 0.14em;
+    }
+
+    .solutions__heading {
+        font-size: clamp(26px, 7vw, 34px);
+    }
+
+    .solutions__intro {
+        max-width: 100%;
+        margin-top: 12px;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .solutions__split {
+        min-height: 0;
+        grid-template-columns: 1fr;
+        grid-template-rows:
+            auto
+            2px
+            auto;
+    }
+
+    .solutions__panel--behavioral,
+    .solutions__panel--technical {
+        padding: 36px 24px 42px;
+    }
+
+    .solutions__panel-heading {
+        margin-bottom: 28px;
+        font-size: clamp(25px, 7vw, 32px);
+    }
+
+    .solutions__divider {
+        width: 100%;
+        height: 2px;
+        background:
+            linear-gradient(
+                90deg,
+                transparent 0%,
+                #1a73e8 25%,
+                #005eb8 75%,
+                transparent 100%
+            );
+    }
+
+    .solutions__behavioral-item {
+        margin-bottom: 24px;
+    }
+
+    .solutions__craft-row {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+        margin-bottom: 30px;
+    }
+
+    .solutions__craft-step {
+        flex: 0 0 calc(33.333% - 18px);
+    }
+
+    .solutions__craft-arrow {
+        display: none;
+    }
+
+    .solutions__agents {
+        margin-top: 30px;
+        padding-top: 26px;
+    }
+
+    .solutions__agents-card {
+        grid-template-columns: 1fr;
+    }
+
+    .solutions__agent-divider {
+        width: 100%;
+        height: 1px;
+    }
+
+    .solutions__agent-column {
+        padding: 24px 20px;
+    }
+
+    .solutions__workflow {
+        flex-wrap: wrap;
+    }
+}
+
+/* Very small phones */
+
+@media (max-width: 420px) {
+    .solutions__header {
+        padding: 25px 16px 28px;
+    }
+
+    .solutions__panel--behavioral,
+    .solutions__panel--technical {
+        padding: 32px 18px 36px;
+    }
+
+    .solutions__panel-label {
+        font-size: 11px;
+    }
+
+    .solutions__panel-heading {
+        margin-bottom: 24px;
+        font-size: 26px;
+    }
+
+    .solutions__behavioral-desc {
+        font-size: 13px;
+    }
+
+    .solutions__craft-row {
+        gap: 14px;
+    }
+
+    .solutions__craft-step {
+        flex: 0 0 calc(50% - 14px);
+    }
+
+    .solutions__craft-letter {
+        width: 40px;
+        height: 40px;
+    }
+
+    .solutions__agent-column {
+        padding: 20px 16px;
+    }
+
+    .solutions__workflow-box {
+        padding: 7px 9px;
+        font-size: 10px;
+    }
+
+    .solutions__agent-list {
+        font-size: 11px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .solutions__panel,
+    .solutions__behavioral-item,
+    .solutions__craft-step,
+    .solutions__divider {
+        transition: none !important;
+        transform: none !important;
+    }
+}
