@@ -1,23 +1,24 @@
 <!--
 HOW TO EDIT THIS FILE
 Each block separated by a line containing only --- is one card.
+Add as many blocks as you want - they render as a responsive grid.
 Front: the situational quote shown on the card face
 Intervention: the name of the research-backed intervention
 Description: the explanation
 Source: citation
 -->
 
-Front: "I feel like AI doesn't really understand my domain expertise."
-Intervention: Domain-Specific Role Priming
-Description: Assign AI an expert persona matching your field before querying. Domain-primed models reduce hallucination rates by up to 34% in specialized tasks.
-Source: Shanahan et al., 2023
+Front: "I feel like AI causes a loss of autonomy."
+Intervention: Highlighting AI customization
+Description: Showing employees how to tailor their AI to be more inline with their views helps to make it feel like an extension of them instead of a replacement
+Source: Edward L. Deci and Richard M. Ryan’s (1985) seminal research on Self-Determination Theory
 
 ---
 
-Front: "I'm never sure if I can actually trust what the AI tells me."
-Intervention: Structured Verification Protocols
-Description: Implement a 3-source cross-reference requirement for AI-generated factual claims. Builds calibrated trust through systematic validation rather than blind acceptance.
-Source: Lee & Lai, 2024
+Front: "I don't know what happens when I put a prompt into AI."
+Intervention: Explaining AI backend through workshops
+Description: By showing the backend processes of a system it helps to make the risk more apparent and helps to show what the system truly is
+Source: Daniel Ellsberg’s (1961) classic decision theory study on Ambiguity Aversion
 
 ---
 
@@ -28,14 +29,14 @@ Source: Brynjolfsson et al., 2023
 
 ---
 
-Front: "I worry about data privacy when I paste work content into AI tools."
-Intervention: Enterprise AI Policy Training
-Description: Clear guidelines on approved tools and data classifications reduce security anxiety by 67%. Anonymized test-case training builds intuition safely.
-Source: JPMorganChase AI Governance, 2024
+Front: "I feel like AI failures are less acceptable than human failures."
+Intervention: Highlighting AI as a probability system instead of a fail safe tool
+Description: Showing employees the idea that AI can make mistakes and why those mistakes are made helps to limit overreliance on AI and limits the loss of trust when AI makes inevitable mistakes.
+Source: Berkeley Dietvorst, Joseph Simmons, and Cade Massey’s (2015) study on Algorithm Aversion
 
 ---
 
-Front: "I never know whether my prompts are actually any good."
-Intervention: CRAFT Framework Adoption
-Description: Structured prompt methodology across Context, Role, Action, Format, and Tone. Users applying CRAFT report 78% improvement in output relevance.
-Source: Rutgers IDEA Study, 2024
+Front: "I think AI will make my skills less valuable."
+Intervention: Framing AI as a partnership and a way to advance careers
+Description:Showing the benefits that AI provides in minimizing easy tasks helps to showcase AI as a tool to help while still allowing the employees major workflow and skills to shine through.
+Source: RHenri Tajfel and John Turner’s (1979) work on Social Identity Theory
