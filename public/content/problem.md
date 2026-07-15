@@ -4,17 +4,18 @@ eyebrow: small label above the heading (section number + title)
 heading_line1/2/3: the three lines of the big heading. Line 3 gets the blue highlight.
 body_left / body_right: the two paragraph columns.
 stats: the three stat blocks at the bottom. stat is the big number, label is the description.
+DO NOT TOUCH EYEBROW
 -->
 
-eyebrow: 01 / The Problem
+eyebrow: 01 / The Problem 
 
-heading_line1: xyz
-heading_line2: the enterprise.
-heading_line3: Effective use is not.
+heading_line1: Understanding
+heading_line2: AI Adoption.
+heading_line3: Designing Better Adoption.
 
-body_left: Organizations deploy AI tools at unprecedented speed while employees are expected to adapt overnight. The gap between access and meaningful adoption carries real behavioral, ethical, and operational consequences.
+body_left: As JPMorgan expands AI tools across the organization, employees are being introduced to new capabilities at an unprecedented pace. Our research found that successful adoption depends not only on access to AI, but also on how clearly employees understand its purpose, limitations, and practical value within their daily work.
 
-body_right: This research investigates how Rutgers students and JPMorganChase professionals actually use generative AI — what stops them from using it effectively, and what structured interventions can close the gap between access and performance.
+body_right: Through a human-centered research partnership between Rutgers IDEA and JPMorganChase, we studied employee experiences with AI to uncover the barriers to effective adoption. These findings became the foundation for designing an AI workshop that helps employees build confidence, develop practical prompting skills, and use AI more intentionally.
 
 stat1_value: 51
 stat1_label: Participants surveyed globally across client onboarding teams at JPMC
